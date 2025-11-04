@@ -279,7 +279,7 @@ body{
 /* Reveal animations */
 .reveal{ opacity:0; transform: translateY(18px) scale(.995); transition:opacity 700ms var(--ease), transform 700ms var(--ease); will-change:opacity,transform;}
 .reveal.in-view{ opacity:1; transform: translateY(0) scale(1); }
-.event-card.reveal.in-view{ transform: translateY(0) scale(1); box-shadow: 0 12px 40px rgba(2,6,23,0.25) }
+.event-card.reveal.in-view{ transform: translateY(0) scale(1); box-shadow: 0 15px 40px rgba(1, 6, 24, 1);border-radius: 10px;padding: 18px;background: var(--card-bg);border: 1px solid var(--glass-border);}
 
 /* Scrollbar - glass style */
 :root::-webkit-scrollbar { width:12px; height:12px; }

@@ -1,260 +1,281 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Google Developer Groups on Campus — [College Name]</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Google Developer Groups on Campus — SOA ITER</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
-  <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="style.css">
+    <meta name="color-scheme" content="light dark">
+   
 </head>
+
 <body>
-  <!-- Intro overlay (full-screen) -->
-  <div id="intro" class="intro" role="dialog" aria-label="Intro animation">
-    <div class="intro-inner" id="introInner" aria-hidden="false">
-      <div class="intro-logo" id="introLogo" aria-hidden="true">
-        <!-- simple mark: animated circles in HTML/CSS (also used for masking) -->
-        <svg viewBox="0 0 200 80" width="280" height="112" aria-hidden="true">
-          <defs>
-            <linearGradient id="gA" x1="0" x2="1">
-              <stop offset="0" stop-color="#4285F4"/>
-              <stop offset="1" stop-color="#34A853"/>
-            </linearGradient>
-            <linearGradient id="gB" x1="0" x2="1">
-              <stop offset="0" stop-color="#EA4335"/>
-              <stop offset="1" stop-color="#FBBC05"/>
-            </linearGradient>
-          </defs>
-          <!-- GDG circular motif -->
-          <g id="logoMark" transform="translate(16,10)">
-            <circle cx="30" cy="30" r="18" fill="#4285F4" class="mark-dot mark-dot-a"/>
-            <circle cx="55" cy="16" r="12" fill="#EA4335" class="mark-dot mark-dot-b"/>
-            <circle cx="80" cy="30" r="14" fill="#FBBC05" class="mark-dot mark-dot-c"/>
-            <circle cx="55" cy="46" r="10" fill="#34A853" class="mark-dot mark-dot-d"/>
-          </g>
-          <g transform="translate(110,18)">
-            <text x="0" y="24" font-family="Inter, system-ui, -apple-system, Roboto" font-size="22" font-weight="800" fill="currentColor">GDGoC</text>
-          </g>
-        </svg>
-      </div>
+    <!-- Intro overlay (full-screen) -->
+    <div id="intro" class="intro" role="dialog" aria-label="Intro animation">
+        <div class="intro-inner" id="introInner" aria-hidden="false">
+            <div class="intro-logo" id="introLogo" aria-hidden="true">
+                <!-- simple mark: animated circles in HTML/CSS (also used for masking) -->
+                <svg viewBox="0 0 200 80" width="280" height="112" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="gA" x1="0" x2="1">
+                            <stop offset="0" stop-color="#4285F4" />
+                            <stop offset="1" stop-color="#34A853" />
+                        </linearGradient>
+                        <linearGradient id="gB" x1="0" x2="1">
+                            <stop offset="0" stop-color="#EA4335" />
+                            <stop offset="1" stop-color="#FBBC05" />
+                        </linearGradient>
+                    </defs>
+                    <!-- GDG circular motif -->
+                    <g id="logoMark" transform="translate(16,10)">
+                        <circle cx="30" cy="30" r="18" fill="#4285F4" class="mark-dot mark-dot-a" />
+                        <circle cx="55" cy="16" r="12" fill="#EA4335" class="mark-dot mark-dot-b" />
+                        <circle cx="80" cy="30" r="14" fill="#FBBC05" class="mark-dot mark-dot-c" />
+                        <circle cx="55" cy="46" r="10" fill="#34A853" class="mark-dot mark-dot-d" />
+                    </g>
+                    <g transform="translate(110,18)">
+                        <text x="0" y="24" font-family="Inter, system-ui, -apple-system, Roboto" font-size="22"
+                            font-weight="800" fill="currentColor">GDGoC</text>
+                    </g>
+                </svg>
+            </div>
 
-      <div class="intro-text">
-        <h2>Google Developer Groups on Campus</h2>
-        <p class="sub">Welcome to GDGoC — building, learning, and launching together.</p>
-      </div>
+            <div class="intro-text">
+                <h2>Google Developer Groups on Campus</h2>
+                <p class="sub">Welcome to GDGoC — building, learning, and launching together.</p>
+            </div>
 
-      <div class="intro-progress" id="introProgress" aria-hidden="true">
-        <div class="bar"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Top navigation (replaces semicircle) -->
-  <header class="top-nav" role="banner">
-    <div class="nav-inner container-small">
-      <a class="brand" href="#hero" aria-label="GDGoC Home">
-        <svg class="brand-mark" viewBox="0 0 48 48" width="36" height="36" aria-hidden="true">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1">
-              <stop offset="0" stop-color="#5ef0c6"/>
-              <stop offset="1" stop-color="#32c1a8"/>
-            </linearGradient>
-          </defs>
-          <rect x="4" y="4" width="40" height="40" rx="10" fill="url(#g1)"></rect>
-          <path d="M14 30c6-10 20-10 24-2" stroke="#042023" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        </svg>
-        <span class="brand-text">GDGoC</span>
-      </a>
-
-      <nav class="nav" role="navigation" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="#hero" data-scroll-to="hero" class="nav-link">Home</a></li>
-          <li><a href="#about" data-scroll-to="about" class="nav-link">About</a></li>
-          <li><a href="#events" data-scroll-to="events" class="nav-link">Events</a></li>
-          <li><a href="#join" data-scroll-to="join" class="nav-link">Join</a></li>
-          <li><a href="#contact" data-scroll-to="contact" class="nav-link">Contact</a></li>
-        </ul>
-        <span class="nav-indicator" aria-hidden="true"></span>
-      </nav>
-
-      <div class="nav-actions">
-        <button id="theme-toggle" aria-label="Toggle dark/light theme" class="theme-toggle" title="Toggle theme">
-          <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-            <use href="assets/icons.svg#moon-sun"></use>
-          </svg>
-        </button>
-
-        <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-          <span class="hamburger-box"><span class="hamburger-inner"></span></span>
-        </button>
-      </div>
+            <div class="intro-progress" id="introProgress" aria-hidden="true">
+                <div class="bar"></div>
+            </div>
+        </div>
     </div>
 
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-      <ul>
-        <li><a href="#hero" data-scroll-to="hero" class="mobile-link">Home</a></li>
-        <li><a href="#about" data-scroll-to="about" class="mobile-link">About</a></li>
-        <li><a href="#events" data-scroll-to="events" class="mobile-link">Events</a></li>
-        <li><a href="#join" data-scroll-to="join" class="mobile-link">Join</a></li>
-        <li><a href="#contact" data-scroll-to="contact" class="mobile-link">Contact</a></li>
-      </ul>
-    </div>
-  </header>
+    <!-- Top navigation (replaces semicircle) -->
+    <header class="top-nav" role="banner">
+        <div class="nav-inner container-small">
+            <a class="brand" href="#hero" aria-label="GDGoC Home">
+                <svg class="brand-mark" viewBox="0 0 48 48" width="36" height="36" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="g1" x1="0" x2="1">
+                            <stop offset="0" stop-color="#5ef0c6" />
+                            <stop offset="1" stop-color="#32c1a8" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="4" y="4" width="40" height="40" rx="10" fill="url(#g1)"></rect>
+                    <path d="M14 30c6-10 20-10 24-2" stroke="#042023" stroke-width="2.5" fill="none"
+                        stroke-linecap="round" />
+                </svg>
+                <span class="brand-text">GDGoC</span>
+            </a>
 
-  <!-- Custom cursor -->
-  <div id="cursor" aria-hidden="true"></div>
+            <nav class="nav" role="navigation" aria-label="Primary">
+                <ul class="nav-list">
+                    <li><a href="#hero" data-scroll-to="hero" class="nav-link">Home</a></li>
+                    <li><a href="#about" data-scroll-to="about" class="nav-link">About</a></li>
+                    <li><a href="#events" data-scroll-to="events" class="nav-link">Events</a></li>
+                    <li><a href="#join" data-scroll-to="join" class="nav-link">Join</a></li>
+                    <li><a href="#contact" data-scroll-to="contact" class="nav-link">Contact</a></li>
+                </ul>
+                <span class="nav-indicator" aria-hidden="true"></span>
+            </nav>
 
-  <!-- Main content -->
-  <main id="main" class="main" aria-live="polite">
-    <section id="hero" class="section hero" tabindex="-1" aria-labelledby="hero-title">
-      <!-- Canvas for orbiting particles (interactive) -->
-      <!-- <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas> -->
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle dark/light theme" class="theme-toggle"
+                    title="Toggle theme">
+                    <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                        <use href="assets/icons.svg#moon-sun"></use>
+                    </svg>
+                </button>
 
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow reveal" data-parallax="0.4">EVENT HIGHLIGHT • NOV 20</p>
-            <h1 id="hero-title" class="reveal" data-parallax="0.2">
-              Google Developer Groups on Campus — <span class="college">[College Name]</span>
-              <span class="status-dot" aria-hidden="true"></span>
-            </h1>
-            <p class="lead reveal" data-parallax="0.1">Join a community of student developers building, learning, and launching projects together. Workshops, hackathons, mentorship, and collaborative projects.</p>
-
-            <div class="hero-actions reveal">
-              <button id="joinNow" class="btn primary" data-scroll-to="join">Join the Community</button>
-              <a class="btn ghost" href="#events" data-scroll-to="events">See Events</a>
+                <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="mobileMenu">
+                    <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+                </button>
             </div>
-          </div>
-
-          <div class="hero-visual reveal" data-parallax="-0.08">
-            <div class="visual-card">
-              <img src="assets/hero-placeholder.png" alt="Event illustration" width="720" height="420">
-            </div>
-          </div>
         </div>
-      </div>
 
-      <!-- Frosted bubble overlay on left covering part of the hero copy -->
-    
-    </section>
-
-    <section id="about" class="section about" aria-labelledby="about-title">
-      <div class="container">
-        <h2 id="about-title" class="section-title reveal">About GDGoC</h2>
-        <div class="cards-grid">
-          <article class="card reveal">
-            <h3>Mission</h3>
-            <p>Empower students to learn, build, and ship meaningful software with mentorship, workshops, and events.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Vision</h3>
-            <p>Foster a sustainable community of student developers who collaborate, share knowledge, and grow together.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Past Initiatives</h3>
-            <p>Hackathons, study jams, guest talks, and collaborative projects with measurable community impact.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="events" class="section events" aria-labelledby="events-title">
-      <div class="container">
-        <h2 id="events-title" class="section-title reveal">Upcoming Events</h2>
-        <div class="events-grid">
-          <article class="event-card reveal">
-            <h4>Intro to Flutter</h4>
-            <p class="meta">Dec 5 • Workshop</p>
-            <p>Hands-on Flutter session to build your first cross-platform app.</p>
-            <a class="small-link" href="#">Register</a>
-          </article>
-
-          <article class="event-card reveal">
-            <h4>AI Study Jam</h4>
-            <p class="meta">Jan 12 • Study Jam</p>
-            <p>Learn practical machine learning workflows and deploy simple models.</p>
-            <a class="small-link" href="#">Register</a>
-          </article>
-
-          <article class="event-card reveal">
-            <h4>Campus Hackathon</h4>
-            <p class="meta">Feb 3-4 • Hackathon</p>
-            <p>24-hour collaborative hackathon with mentorship and prizes.</p>
-            <a class="small-link" href="#">Register</a>
-          </article>
-
-          <article class="event-card reveal">
-            <h4>Community AMA</h4>
-            <p class="meta">Monthly • Panel</p>
-            <p>Ask the seniors — career paths, internships, and project guidance.</p>
-            <a class="small-link" href="#">RSVP</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="join" class="section join" aria-labelledby="join-title">
-      <div class="container">
-        <h2 id="join-title" class="section-title reveal">Join the Community</h2>
-        <p class="reveal">Sign up to receive updates and invites to workshops and events. No spam, just community announcements.</p>
-
-        <form id="joinForm" class="form reveal" aria-label="Join form" novalidate>
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required placeholder="Your full name">
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required placeholder="you@school.edu">
-          </div>
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tell us about your interests (web, mobile, ML)..."></textarea>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn primary">Send</button>
-            <div id="formSuccess" class="success-message" aria-live="polite" hidden>
-              ✓ Thanks! We'll be in touch — enjoy the community.
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <footer id="contact" class="section footer" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="footer-grid reveal">
-          <div>
-            <h3 id="contact-title">GDGoC — [College Name]</h3>
-            <p>Contact: team@gdg.example.edu • <a href="tel:+0000000000">+0 (000) 000-0000</a></p>
-            <div class="socials">
-              <a aria-label="Twitter" href="#"><svg class="icon"><use href="assets/icons.svg#twitter"></use></svg></a>
-              <a aria-label="GitHub" href="#"><svg class="icon"><use href="assets/icons.svg#github"></use></svg></a>
-              <a aria-label="Discord" href="#"><svg class="icon"><use href="assets/icons.svg#discord"></use></svg></a>
-            </div>
-          </div>
-
-          <nav aria-label="Quick links">
-            <ul class="footer-links">
-              <li><a href="#about" data-scroll-to="about">About</a></li>
-              <li><a href="#events" data-scroll-to="events">Events</a></li>
-              <li><a href="#join" data-scroll-to="join">Join</a></li>
-              <li><a href="#contact" data-scroll-to="contact">Contact</a></li>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+            <ul>
+                <li><a href="#hero" data-scroll-to="hero" class="mobile-link">Home</a></li>
+                <li><a href="#about" data-scroll-to="about" class="mobile-link">About</a></li>
+                <li><a href="#events" data-scroll-to="events" class="mobile-link">Events</a></li>
+                <li><a href="#join" data-scroll-to="join" class="mobile-link">Join</a></li>
+                <li><a href="#contact" data-scroll-to="contact" class="mobile-link">Contact</a></li>
             </ul>
-          </nav>
         </div>
+    </header>
 
-        <div class="copyright">
-          <small>© <span id="year"></span> Google Developer Groups on Campus — [College Name]. All rights reserved.</small>
-        </div>
-      </div>
-    </footer>
-  </main>
+    <!-- Custom cursor -->
+    <div id="cursor" aria-hidden="true"></div>
 
-  <script src="script.js" defer></script>
+    <!-- Main content -->
+    <main id="main" class="main" aria-live="polite">
+        <section id="hero" class="section hero" tabindex="-1" aria-labelledby="hero-title">
+            <!-- Canvas for orbiting particles (interactive) -->
+            <!-- <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas> -->
+
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <p class="eyebrow reveal" data-parallax="0.4">EVENT HIGHLIGHT • NOV 20</p>
+                        <h1 id="hero-title" class="reveal" data-parallax="0.2">
+                            Google Developer Groups on Campus — <span class="college">SOA ITER</span>
+                            <span class="status-dot" aria-hidden="true"></span>
+                        </h1>
+                        <p class="lead reveal" data-parallax="0.1">Join a community of student developers building,
+                            learning, and launching projects together. Workshops, hackathons, mentorship, and
+                            collaborative projects.</p>
+
+                        <div class="hero-actions reveal">
+                            <button id="joinNow" class="btn primary" data-scroll-to="join">Join the Community</button>
+                            <a class="btn ghost" href="#events" data-scroll-to="events">See Events</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual reveal" data-parallax="-0.08">
+                        <div class="visual-card">
+                            <img src="https://storage.googleapis.com/exceedlms-external-uploads-production/uploads/categories/pictures/2443/original/gdc-banner.jpg" alt="Event illustration" width="700" height="420">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="about" class="section about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section-title reveal">About GDGoC</h2>
+                <div class="cards-grid">
+                    <article class="card reveal">
+                        <h3>Mission</h3>
+                        <p>Empower students to learn, build, and ship meaningful software with mentorship, workshops,
+                            and events.</p>
+                    </article>
+                    <article class="card reveal">
+                        <h3>Vision</h3>
+                        <p>Foster a sustainable community of student developers who collaborate, share knowledge, and
+                            grow together.</p>
+                    </article>
+                    <article class="card reveal">
+                        <h3>Past Initiatives</h3>
+                        <p>Hackathons, study jams, guest talks, and collaborative projects with measurable community
+                            impact.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="section events" aria-labelledby="events-title">
+            <div class="container">
+                <h2 id="events-title" class="section-title reveal">Upcoming Events</h2>
+                <div class="events-grid">
+                    <article class="event-card reveal">
+                        <h4>Intro to Flutter</h4>
+                        <p class="meta">Dec 5 • Workshop</p>
+                        <p>Hands-on Flutter session to build your first cross-platform app.</p>
+                        <a class="small-link" href="#">Register</a>
+                    </article>
+
+                    <article class="event-card reveal">
+                        <h4>AI Study Jam</h4>
+                        <p class="meta">Jan 12 • Study Jam</p>
+                        <p>Learn practical machine learning workflows and deploy simple models.</p>
+                        <a class="small-link" href="#">Register</a>
+                    </article>
+
+                    <article class="event-card reveal">
+                        <h4>Campus Hackathon</h4>
+                        <p class="meta">Feb 3-4 • Hackathon</p>
+                        <p>24-hour collaborative hackathon with mentorship and prizes.</p>
+                        <a class="small-link" href="#">Register</a>
+                    </article>
+
+                    <article class="event-card reveal">
+                        <h4>Community AMA</h4>
+                        <p class="meta">Monthly • Panel</p>
+                        <p>Ask the seniors — career paths, internships, and project guidance.</p>
+                        <a class="small-link" href="#">RSVP</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="section join" aria-labelledby="join-title">
+            <div class="container">
+                <h2 id="join-title" class="section-title reveal">Join the Community</h2>
+                <p class="reveal">Sign up to receive updates and invites to workshops and events. No spam, just
+                    community announcements.</p>
+
+                <form id="joinForm" class="form reveal" aria-label="Join form" novalidate>
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" required placeholder="Your full name">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required placeholder="you@school.edu">
+                    </div>
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Tell us about your interests (web, mobile, ML)..."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary">Send</button>
+                        <div id="formSuccess" class="success-message" aria-live="polite" hidden>
+                            ✓ Thanks! We'll be in touch — enjoy the community.
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer id="contact" class="section footer" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="footer-grid reveal">
+                    <div>
+                        <h3 id="contact-title">GDGoC —SOA ITER</h3>
+                        <p>Contact: team@gdg.example.edu • <a href="tel:+0000000000">+0 (000) 000-0000</a></p>
+                        <div class="socials">
+                            <a aria-label="Twitter" href="#"><svg class="icon">
+                                    <use href="assets/icons.svg#twitter"></use>
+                                </svg></a>
+                            <a aria-label="GitHub" href="#"><svg class="icon">
+                                    <use href="assets/icons.svg#github"></use>
+                                </svg></a>
+                            <a aria-label="Discord" href="#"><svg class="icon">
+                                    <use href="assets/icons.svg#discord"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+
+                    <nav aria-label="Quick links">
+                        <ul class="footer-links">
+                            <li><a href="#about" data-scroll-to="about">About</a></li>
+                            <li><a href="#events" data-scroll-to="events">Events</a></li>
+                            <li><a href="#join" data-scroll-to="join">Join</a></li>
+                            <li><a href="#contact" data-scroll-to="contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="copyright">
+                    <small>© <span id="year"></span> Google Developer Groups on Campus — SOA ITER. All rights
+                        reserved.</small>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js" defer></script>
+    
 </body>
+
 </html>
